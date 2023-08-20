@@ -36,6 +36,8 @@ const GlobaleStyle = createGlobalStyle`
   }
   body {
     line-height: 1;
+    background-color: ${(props) => props.theme.bgColor};
+    font-weight: bold;
   }
   blockquote, q {
     quotes: none;
