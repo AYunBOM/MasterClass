@@ -1,6 +1,5 @@
-import Router from "./Router";
 import { createGlobalStyle } from "styled-components";
-import { ReactQueryDevtools } from "react-query/devtools";
+import ToDoList from "./components/ToDoList";
 
 const GlobaleStyle = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -38,6 +37,7 @@ const GlobaleStyle = createGlobalStyle`
   body {
     line-height: 1;
     background-color: ${(props) => props.theme.bgColor};
+    color: white;
     font-weight: bold;
   }
   blockquote, q {
@@ -59,14 +59,21 @@ const GlobaleStyle = createGlobalStyle`
     text-decoration:none;
     color:inherit;
   }
+  button {
+    background-color: white;
+    color: ${(props) => props.theme.bgColor};
+    border-radius: 30px;
+    border: none;
+    margin: 3px;
+    padding: 2px 10px;
+  }
   `;
 
 function App() {
   return (
     <>
       <GlobaleStyle />
-      <Router />
-      <ReactQueryDevtools initialIsOpen={true} />
+      <ToDoList />
     </>
   );
 }
